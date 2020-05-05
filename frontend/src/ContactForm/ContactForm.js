@@ -4,7 +4,6 @@ import React from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 
 class ContactForm extends React.Component {
@@ -45,50 +44,45 @@ class ContactForm extends React.Component {
 
   render() {
     return (
-      <div>
-        <Container>
-          <Col md={{ span: 8, offset: 2 }}>
-            <div>
-              <h2>Send us a message</h2>
-              <Form onSubmit={this.handleSubmit.bind(this)} method="POST">
-                <Form.Group controlId="formName">
-                  <Form.Label>Name</Form.Label>
-                  <Form.Control
-                    placeholder="Enter name"
-                    value={this.state.name}
-                    onChange={this.onNameChange.bind(this)}
-                  />
-                </Form.Group>
+      <Container>
+        <Col md={{ span: 8, offset: 2 }}>
+          <h2>Send us a message</h2>
+          <Form onSubmit={this.handleSubmit.bind(this)} method="POST">
+            <Form.Group controlId="formName">
+              <Form.Label>Name</Form.Label>
+              <Form.Control
+                placeholder="Enter name"
+                value={this.state.name}
+                onChange={this.onNameChange.bind(this)}
+              />
+            </Form.Group>
 
-                <Form.Group controlId="formEmail">
-                  <Form.Label>Email</Form.Label>
-                  <Form.Control
-                    type="email"
-                    placeholder="Enter email"
-                    value={this.state.email}
-                    onChange={this.onEmailChange.bind(this)}
-                  />
-                </Form.Group>
+            <Form.Group controlId="formEmail">
+              <Form.Label>Email</Form.Label>
+              <Form.Control
+                type="email"
+                placeholder="Enter email"
+                value={this.state.email}
+                onChange={this.onEmailChange.bind(this)}
+              />
+            </Form.Group>
 
-                <Form.Group controlId="textarea">
-                  <Form.Label>Message</Form.Label>
-                  <Form.Control
-                    as="textarea"
-                    rows="3"
-                    value={this.state.message}
-                    onChange={this.onMessageChange.bind(this)}
-                  />
-                </Form.Group>
+            <Form.Group controlId="textarea">
+              <Form.Label>Message</Form.Label>
+              <Form.Control
+                as="textarea"
+                rows="3"
+                value={this.state.message}
+                onChange={this.onMessageChange.bind(this)}
+              />
+            </Form.Group>
 
-                <Button variant="primary" type="submit">
-                  Send
-                </Button>
-              </Form>
-            </div>
-          </Col>
-        </Container>
-        };
-      </div>
+            <Button variant="primary" type="submit">
+              Send
+            </Button>
+          </Form>
+        </Col>
+      </Container>
     );
   }
 

@@ -1,10 +1,10 @@
-import React from "./node_modules/react";
+import React from "react";
 
 //React bootstrap components
-import Form from "./node_modules/react-bootstrap/Form";
-import Button from "./node_modules/react-bootstrap/Button";
-import Col from "./node_modules/react-bootstrap/Col";
-import Container from "./node_modules/react-bootstrap/Container";
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
+import Col from "react-bootstrap/Col";
+import Container from "react-bootstrap/Container";
 
 class ContactForm extends React.Component {
   constructor(props) {
@@ -46,7 +46,11 @@ class ContactForm extends React.Component {
     return (
       <Container>
         <Col md={{ span: 8, offset: 2 }}>
-          <h2>Send us a message</h2>
+          <h2
+            style={{ "text-align": "center", padding: "20px", color: "green" }}
+          >
+            Send us a message
+          </h2>
           <Form onSubmit={this.handleSubmit.bind(this)} method="POST">
             <Form.Group controlId="formName">
               <Form.Label>Name</Form.Label>
@@ -77,7 +81,7 @@ class ContactForm extends React.Component {
               />
             </Form.Group>
 
-            <Button variant="primary" type="submit">
+            <Button variant="success" type="submit">
               Send
             </Button>
           </Form>

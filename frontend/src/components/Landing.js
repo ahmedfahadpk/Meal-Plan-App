@@ -7,7 +7,7 @@ import Signup from "./Signup";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 
-export default function App() {
+export default function Landing() {
   return (
     <Router>
       <div>
@@ -18,16 +18,16 @@ export default function App() {
               <Link to="/">Home</Link>
             </Nav.Link>
             <Nav.Link>
-              <Link to="/login">Login</Link>
-            <Nav.Link>
-            <Nav.Link>
-              <Link to="/signup">Signup</Link>
-            <Nav.Link>
-            <Nav.Link>
               <Link to="/about">About</Link>
-            <Nav.Link>
             </Nav.Link>
-              <Link to="/contact">Contact us</Link>
+            <Nav.Link>
+              <Link to="/form">Contact us</Link>
+            </Nav.Link>
+            <Nav.Link>
+              <Link to="/login">Log in</Link>
+            </Nav.Link>
+            <Nav.Link>
+              <Link to="/signup">Sign up</Link>
             </Nav.Link>
           </Nav>
         </Navbar>
@@ -36,14 +36,14 @@ export default function App() {
           <Route path="/about">
             <About />
           </Route>
+          <Route path="/form">
+            <Contact />
+          </Route>
           <Route path="/login">
             <LoginPage />
           </Route>
           <Route path="/signup">
             <SignupPage />
-          </Route>
-          <Route path="/contact">
-            <ContactPage />
           </Route>
           <Route path="/">
             <Home />
@@ -62,14 +62,12 @@ function About() {
   return <h2>About</h2>;
 }
 
-function ContactPage() {
+function Contact() {
   return <ContactForm />;
 }
-
 function LoginPage() {
   return <Login />;
 }
-
 function SignupPage() {
   return <Signup />;
 }

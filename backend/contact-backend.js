@@ -52,7 +52,7 @@ router.post("/send", (req, res, next) => {
       from: "mealplanapptest@gmail.com",
       to: email,
       subject: "Submission was successful",
-      text: `Thank you for contacting us!\n\nForm details\nName: ${name}\nEmail: ${email}\nMessage: ${message}`,
+      text: `Thank you for contacting us! We will get back to you shortly!\n\nForm details\nName: ${name}\nEmail: ${email}\nMessage: ${message}`,
     },
     function (error, info) {
       if (error) {

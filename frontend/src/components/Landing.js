@@ -3,8 +3,10 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import ContactForm from "./ContactForm";
 import Login from "./Login";
 import Signup from "./Signup";
+
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+
 export default function App() {
   return (
     <Router>
@@ -35,13 +37,13 @@ export default function App() {
             <About />
           </Route>
           <Route path="/login">
-            <Login />
+            <LoginPage />
           </Route>
           <Route path="/signup">
-            <Signup />
+            <SignupPage />
           </Route>
           <Route path="/contact">
-            <ContactForm />
+            <ContactPage />
           </Route>
           <Route path="/">
             <Home />
@@ -60,6 +62,14 @@ function About() {
   return <h2>About</h2>;
 }
 
-function Contact() {
+function ContactPage() {
   return <ContactForm />;
+}
+
+function LoginPage() {
+  return <Login />;
+}
+
+function SignupPage() {
+  return <Signup />;
 }

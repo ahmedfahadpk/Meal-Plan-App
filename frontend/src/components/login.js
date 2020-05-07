@@ -1,7 +1,7 @@
 import React, { Component } from "./node_modules/react";
 import Button from "./node_modules/react-bootstrap/Button";
 
-export default class Login extends Component {
+class Login extends Component {
   render() {
     return (
       <form>
@@ -48,3 +48,5 @@ export default class Login extends Component {
     );
   }
 }
+
+export default Login;

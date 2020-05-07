@@ -3,7 +3,7 @@ import React from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import ContactForm from "./ContactForm/ContactForm";
+import ContactForm from "./Components/ContactForm";
 
 function App() {
   return (

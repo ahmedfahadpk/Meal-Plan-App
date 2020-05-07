@@ -1,10 +1,10 @@
-import React from "react";
+import React from "./node_modules/react";
 
 //React bootstrap components
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
-import Col from "react-bootstrap/Col";
-import Container from "react-bootstrap/Container";
+import Form from "./node_modules/react-bootstrap/Form";
+import Button from "./node_modules/react-bootstrap/Button";
+import Col from "./node_modules/react-bootstrap/Col";
+import Container from "./node_modules/react-bootstrap/Container";
 
 class ContactForm extends React.Component {
   constructor(props) {
@@ -19,7 +19,7 @@ class ContactForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     //console.log(this.state);
-    fetch("http://localhost:3002/send", {
+    fetch("http://localhost:5000/send", {
       method: "POST",
       body: JSON.stringify(this.state),
       headers: {

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import ContactForm from "./ContactForm";
 import Login from "./Login";
 import Signup from "./Signup";
+import About from "./About";
 
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -34,7 +35,7 @@ export default function Landing() {
 
         <Switch>
           <Route path="/about">
-            <About />
+            <AboutPage />
           </Route>
           <Route path="/form">
             <Contact />
@@ -58,8 +59,8 @@ function Home() {
   return <h2>Home</h2>;
 }
 
-function About() {
-  return <h2>About</h2>;
+function AboutPage() {
+  return <About/>;
 }
 
 function Contact() {

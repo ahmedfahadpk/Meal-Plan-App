@@ -1,8 +1,9 @@
 import React from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import Container from "react-bootstrap/Container";
 import Card from "react-bootstrap/Card";
-import CardGroup from "react-bootstrap/CardGroup";
+import CardDeck from "react-bootstrap/CardDeck";
 import Button from "react-bootstrap/Button";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -17,10 +18,20 @@ import "./About.css";
 
 const About = () => {
   return (
-    <div id="about">
-      <Container id="aboutContainer">
-        <h2> How it works</h2>
-        <CardGroup>
+    <Container fluid="xs" id="about">
+      <Container className="aboutContainer" id="aboutAppContainer">
+        <h2>About Meal Plan App</h2>
+        <p>
+          This app was created to promote better and healthier eating habits.
+          Meal Plan App is for anyone who is looking for easy way to find new
+          recipes according to their preferences. By signing up, you can create
+          a profile and view your recipe history. You can search recipes also
+          without signing in.
+        </p>
+      </Container>
+      <Container className="aboutContainer" id="howItWorksContainer">
+        <h2> How It Works</h2>
+        <CardDeck>
           <Card className="aboutCard">
             <Card.Body>
               <FontAwesomeIcon
@@ -65,10 +76,18 @@ const About = () => {
               <Card.Text> Enjoy your meal and welcome back!</Card.Text>
             </Card.Body>
           </Card>
-        </CardGroup>
-        <Button variant="success">Get started</Button>
+        </CardDeck>
+        <Link to="/filter">
+          <Button variant="success">Get started</Button>
+        </Link>
       </Container>
-    </div>
+      <Container className="aboutContainer" id="aboutUsContainer">
+        <h2>About Us</h2>
+        <p>
+          About Us text coming here ...
+        </p>
+      </Container>
+    </Container>
   );
 };
 

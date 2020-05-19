@@ -1,17 +1,19 @@
 import React, { Component } from "react";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
+import Col from "react-bootstrap/Col";
 
 class SignUp extends Component {
   render() {
     return (
       <Container fluid="sm">
+        <Col md={{ span: 8, offset: 2 }}>
         <form>
-          <h3
-            style={{ "text-align": "center", padding: "20px", color: "green" }}
+          <h2
+            style={{ textAlign: "center", padding: "20px", color: "green" }}
           >
             Sign Up
-          </h3>
+          </h2>
 
           <div className="form-group">
             <label>First name</label>
@@ -56,6 +58,7 @@ class SignUp extends Component {
             Already registered <a href="#">sign in?</a>
           </p>
         </form>
+        </Col>
       </Container>
     );
   }

@@ -1,17 +1,19 @@
 import React, { Component } from "react";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
+import Col from "react-bootstrap/Col";
 
 class Login extends Component {
   render() {
     return (
       <Container fluid="sm">
+        <Col md={{ span: 8, offset: 2 }}>
         <form>
-          <h3
-            style={{ "text-align": "center", padding: "20px", color: "green" }}
+          <h2
+            style={{ textAlign: "center", padding: "20px", color: "green" }}
           >
             Sign In
-          </h3>
+          </h2>
 
           <div className="form-group">
             <label>Email address</label>
@@ -51,6 +53,7 @@ class Login extends Component {
             Forgot <a>password?</a>
           </p>
         </form>
+        </Col>
       </Container>
     );
   }
